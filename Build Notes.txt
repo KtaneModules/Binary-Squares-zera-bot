@@ -1,0 +1,9 @@
+Binary Squares v1.0
+Do binary operations with colored squares to produce a final answer.
+
+Modid: binarySquares
+
+Created by zerakat
+
+---
+1.0 initial release

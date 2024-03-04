@@ -1,0 +1,10 @@
+{
+  "name": "binarySquares-Editor",
+  "references": [
+    "binarySquares"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": []
+}

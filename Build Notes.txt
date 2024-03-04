@@ -7,3 +7,5 @@ Created by zerakat
 
 ---
 1.0 initial release
+
+1.1 fixed fatal logic error

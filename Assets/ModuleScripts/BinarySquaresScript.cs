@@ -123,7 +123,7 @@ public class BinarySquaresScript : MonoBehaviour {
 		
 		// execute operations
 		for (int i=0; i<16; i++){
-			currentState[i] = doColorOperation(currentState[i],modifiedFilter[i],currentState[i]);
+			currentState[i] = doColorOperation(modifiedFilter[i],modifiedFilter[i],currentState[i]);
 		}
 
 		Debug.LogFormat("[Binary Squares #{0}] The current state after applying the filter is {1}.", moduleId.ToString(), giveLogGrid(currentState));

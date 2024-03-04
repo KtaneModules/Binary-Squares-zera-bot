@@ -330,7 +330,7 @@ public class BinarySquaresScript : MonoBehaviour {
 	// twitch plays
 
 	#pragma warning disable 414
-	private readonly string TwitchHelpMessage = @"Input the correct square colors and submit via '!input (binaries separated by commas)', '!submit' ";
+	private readonly string TwitchHelpMessage = @"Input the correct square colors and submit via '!input (binaries separated by commas)' and '!submit'. ";
 	#pragma warning restore 414
 
 	IEnumerator ProcessTwitchCommand(string command){

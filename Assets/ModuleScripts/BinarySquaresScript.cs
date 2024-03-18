@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -165,13 +165,7 @@ public class BinarySquaresScript : MonoBehaviour {
 		// start checking if we've already used 3 filters
 		// rule 4: If the sum of the digits in the serial number is odd, apply Filter 4.
 		if (trueRuleCount < 3){
-			int total = 0;
-			foreach(char c in serialNumber){
-				if (Char.IsDigit(c)){
-					total+=Convert.ToInt32(c);
-				}
-			}
-			total = bomb.GetSerialNumberNumbers().Sum();
+			int total = bomb.GetSerialNumberNumbers().Sum();
 
 			if (total%2==1){
 				Debug.LogFormat("[Binary Squares #{0}] The sum of the digits in the serial number is {1}. Applying filter 4.", moduleId.ToString(), total.ToString());
@@ -330,7 +324,7 @@ public class BinarySquaresScript : MonoBehaviour {
 	// twitch plays
 
 	#pragma warning disable 414
-	private readonly string TwitchHelpMessage = @"Input the correct square colors and submit via '!input (binaries separated by commas)' and '!submit'. ";
+	private readonly string TwitchHelpMessage = @"Input the correct square colors and submit via '!{0} input (binaries or colors separated by commas, e.g. ###,###...)' and '!{0} submit'. ";
 	#pragma warning restore 414
 
 	IEnumerator ProcessTwitchCommand(string command){
@@ -347,12 +341,22 @@ public class BinarySquaresScript : MonoBehaviour {
 			command = command.Replace("r","100");
 			command = command.Replace("g","010");
 			command = command.Replace("b","001");
-
 			command = command.Replace("y","110");
 			command = command.Replace("c","011");
 			command = command.Replace("m","101");
 
-			Debug.Log(command);
+            // full words
+			command = command.Replace("black","000");
+			command = command.Replace("white","111");
+
+			command = command.Replace("red","100");
+			command = command.Replace("green","010");
+			command = command.Replace("blue","001");
+			command = command.Replace("yellow","110");
+			command = command.Replace("cyan","011");
+			command = command.Replace("magenta","101");
+
+			Debug.LogFormat("[Binary Squares #{0}] Ran Twitch command: {1}",moduleId.ToString(),command);
 
 			string[] splitList = command.Split(',');
 			for (int i=0; i<16; i++){ 

@@ -2977,6 +2977,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 52467f4e9fea06044ad8d509490431ca, type: 2}
   - {fileID: 2100000, guid: 7a15eb78c21a4ed418d9a966202c7278, type: 2}
   - {fileID: 2100000, guid: 3232f405a8b7d6e4286b24930dcdf254, type: 2}
+  submitButtonObject: {fileID: 1439082129388194}
+  clickSound: 0
 --- !u!114 &114302093702390616
 MonoBehaviour:
   m_ObjectHideFlags: 1
